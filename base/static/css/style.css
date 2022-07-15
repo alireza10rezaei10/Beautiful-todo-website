@@ -1,0 +1,307 @@
+@font-face {
+    font-family: 'iranian-sans';
+    src: url(../fonts/iranian-sans/irsans.ttf)
+}
+  
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'iranian-sans', tahoma, sans-serif;
+    outline: none;
+}
+
+    
+body{
+    background-color: #f6f7fb;    
+}
+
+.page-container{
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 300px auto;
+    gap: 0px;
+}
+
+/*--------------header--------------------*/
+header{
+    height: 100px;
+    background-color: #FFFFFF;
+    padding-top: 30px;
+}
+
+.header-content *{display: inline-block;}
+.header-content{
+    margin: 0 auto;
+    text-align: center;
+    width: 200px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, #00e1ff, #2762cf);
+    color: #2762cf;
+}
+
+.header-icon{
+    width: 30px;
+    height: 30px;
+}
+header h1{
+    font-size: 30px;
+}
+
+/*--------------left side--------------------*/
+.leftside-container{
+    padding: 30px;
+    margin: 30px;
+    background-color: #FFFFFF;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+
+/*---------left side header-----*/
+.leftside-container .header .title{float: right;}
+
+.leftside-container .header::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.leftside-container .header{margin-bottom: 20px;}
+
+.add-new-deadline-btn{float: left;}
+
+.add-new-deadline-btn div{
+    background-color: #00ca80;
+    border-radius: 3px;
+    width: 170px;
+    height: 35px;
+    cursor: pointer;
+    color: white;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.add-new-deadline-btn div:hover{background-image: linear-gradient(to right, #00e28f, #01b976);}
+/*-----end left side header----*/
+
+.edit-icon-container{
+    background-color: #206cfe;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border-radius: 3px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.edit-icon-container:hover{
+    background-image: linear-gradient(to right, #006eff, #2762cf)
+}
+
+.edit-icon{
+    width: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+}
+
+/*----deadline form-----*/
+label{display: block; text-align:right;}
+#add-deadline-form-container{border-top: 2px solid #9b9b9b;}
+
+.deadline-form-container{
+    border: none;
+    margin-bottom: 70px;
+    padding-top: 20px;
+    background-image: url(../img/design/img1.jpg);
+    background-position: right;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+
+.deadline-form-content{width:300px; padding: 10px; float: left; }
+.deadline-form-container::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.deadline-form-content input{
+    width: 280px;
+    height: 30px;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid #9b9b9b;
+    color: #9b9b9b;
+}
+#month{
+    border-radius: 3px;
+    display: block;
+    width: 125px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+.form-btn-container{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    gap: 4%;
+    text-align: center;
+    height: 30px;
+}
+
+.form-btn{
+    border-radius: 3px;
+    cursor: pointer;
+    padding-top: 4px;
+    color: #FFFFFF;
+}
+.submit{background-color: #00ca80;}
+.submit:hover{background-image: linear-gradient(to right, #00e28f, #01b976);}
+.cancel{background-color: rgba(255, 0, 0, 0.55);}
+.cancel:hover{background-image: linear-gradient(to right, rgba(255, 0, 0, 0.15), rgba(255, 0, 0, 0.25));}
+/*--------------right side--------------------*/
+.rightside-container{
+    width: 300px;
+    height: 100vh;
+    min-height: 650px;
+    position: fixed;
+    background-color: #5b7cfd;
+    padding: 10px;
+    padding-top: 10%;
+}
+
+.rightside-container .profile-container{
+    margin: 0 auto;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+
+/*---nav btn---*/
+.nav-btn{
+    width: 30px;
+    height: 30px;
+    color: #FFFFFF;
+}
+.nav-btn-container{
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.open-nav{display: none}
+
+.nav-btn-container:hover{background-image: linear-gradient(to right, #006eff, #2762cf);}
+.nav-btn-container:hover .nav-btn{color: black;}
+
+
+/*----avatar------*/
+.avatar{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: middle;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+.avatar-onhover{
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center; 
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0px -30px 30px 0 black inset;
+    padding-top: 120px;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.avatar-on-hover-icon{
+    width: 20px;
+    height: 20px;
+    margin-bottom: -50px;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.avatar-icon-animation-up{animation-name: avatar-icon-animation-up;}
+.avatar-icon-animation-down{animation-name: avatar-icon-animation-down;}
+
+@keyframes avatar-icon-animation-up {
+    to{margin-bottom: 0px;}
+}
+@keyframes avatar-icon-animation-down {
+    from{margin-bottom: 0px;}
+    to{margin-bottom: -50px;}
+}
+
+.avatar-onhover-animation-up{animation-name: avatar-onhover-animation-up;}
+.avatar-onhover-animation-down{animation-name: avatar-onhover-animation-down;}
+
+@keyframes avatar-onhover-animation-up {
+    to{box-shadow: 0px -30px 20px 0 black inset;}
+}
+@keyframes avatar-onhover-animation-down {
+    from{box-shadow: 0px -30px 20px 0 black inset;}
+    to{box-shadow: 0px -30px 30px 0 black inset;}
+}
+/*----end avatar------*/
+
+
+.rightside-container .profile-container .email{font-size: 14px; color: #ebebeb; padding-top: 5px;}
+
+.today{
+    display: block;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 18px;
+    margin-top: 50px;
+    padding-right: 20px;
+}
+
+.today li{list-style: none;}
+
+.log-out{
+    padding-right: 15px;
+    padding-top: 5px;
+    width: 120px;
+    height: 35px;
+    margin: 0 auto;
+    margin-top: 120px;
+    display: grid;
+    grid-template-columns: 30px 50px;
+    color: #FFFFFF;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.log-out .icon{
+    width: 25px;
+    height: 25px;
+}
+
+.log-out:hover{background-image: linear-gradient(to right, #006eff, #2762cf); color: black;}
+
