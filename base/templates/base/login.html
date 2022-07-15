@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+</head>
+<body>
+    <style>
+        *{box-sizing: border-box; margin: 0; padding: 0;}
+        body{background-color: #fafafa;}
+        .login-container{
+            width: 300px;
+            background-color: #ffffff;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        form{width: 100%; padding: 10px;}
+        form input{
+            width: 280px;
+            display: block;
+            margin: 0px auto;
+            margin-bottom: 10px;
+            height: 25px;
+        }
+        form button{width: 120px; height: 25px; margin: 0px auto; display:block;}
+        h1{background-color: rgba(255, 0, 0, 0.39); margin-bottom: 10px;}
+    </style>
+    <div class="login-container">
+        <form method="post">
+            {% csrf_token %}
+            <h1>{{ msg }}</h1>
+            <input type="username" name="username" id="username" placeholder="username">
+            <input type="password" name="password" id="password" placeholder="password">
+            <button type="submit">Log In</button>
+        </form>
+    </div>
+</body>
+</html>
