@@ -1,4 +1,4 @@
-# Advanced-todo-website
+# Beautiful-todo-website
 وب سایتی برای مدیریت کار های شخصی
 
 ![Screenshot from 2022-07-15 07-30-07](https://user-images.githubusercontent.com/80483621/179140958-fc0899ba-e9e1-45d8-907e-e30a5b0e7919.png)
